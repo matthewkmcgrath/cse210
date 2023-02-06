@@ -11,7 +11,7 @@ public class Entry
     {
         DateTime _currentTime = DateTime.Now;
         string _dateText = _currentTime.ToShortDateString();
-        Console.WriteLine($"{_dateText}");
+        //Console.WriteLine($"{_dateText}");
         string _prompt = PickPrompt();
         Console.WriteLine($"{_prompt}");
         Console.Write($"-> ");
@@ -24,7 +24,6 @@ public class Entry
         {
             Random rnd = new Random();
             int selection = rnd.Next(1, 6);
-            Console.WriteLine($"the selection is {selection}");
             if (selection == 1)
             {
                 string _prompte = "Who was the most interesting person you interacted with today?";
