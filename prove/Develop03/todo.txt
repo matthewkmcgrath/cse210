@@ -1,0 +1,21 @@
+CLASSES
+	PROGRAM (main)
+	SCRIPTURE (has scripture)
+	EndChecker (frequent checks for end)
+	Hide (hides scripture)
+
+store scripture
+
+call todo?
+__________
+what does "accomodate scriptures with multiple verses" mean?
+we will hard code for now
+
+how to add encapsulation principles to plan
+
+
+need 2 constructors in the scrupture class
+
+one that requires one argument
+
+one that requires two arguments
