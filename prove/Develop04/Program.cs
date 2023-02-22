@@ -1,9 +1,12 @@
 using System;
+using System.Linq;
+
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        Icon loadingIcon1 = new Icon();
+        loadingIcon1.Load(60);
     }
 }
