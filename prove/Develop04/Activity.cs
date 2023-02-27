@@ -1,6 +1,6 @@
 public class Activity
 {
-    string _activity = "yah";
+    string _activity = "";
     string _startString;
     public int time;
     public int iterations;
@@ -13,6 +13,10 @@ public class Activity
   //      Load();
 //    }
 
+    public void activitySetter()
+    {
+        Console.WriteLine();
+    }
 
     public string getStart()
     {   
