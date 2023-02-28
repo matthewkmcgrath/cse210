@@ -1,11 +1,8 @@
 public class Activity
 {
-    public string _activity;
+    private string _activity;
     string _startString;
-    public int time;
-    public int iterations;
-    public string mesg1;
-    public string mesg2;
+    private int time;
     
     public string activitySetter(string _userChoice)
     {
