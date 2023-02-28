@@ -5,49 +5,55 @@ using System.Linq;
 class Program
 {
     static void Main(string[] args)
-    {
+    {   
+        void RunProgram()
+        {
         
-        string _userChoice;
-        Console.WriteLine("Menu Options");
-        Console.WriteLine(" 1. Start Breathing Activity");
-        Console.WriteLine(" 2. Start Reflecting Activity");
-        Console.WriteLine(" 3. Start Listing Activity");
-        Console.WriteLine(" 4. Quit");
-        Console.WriteLine();
-        Console.WriteLine("Please enter your selection: ");
-        _userChoice = Console.ReadLine();
+            string _userChoice = Menu("");
+            string Menu(string _userChoice)
+            {
+                while (_userChoice != "4")
+                {
+                    //string _userChoice;
+                    Console.WriteLine("Menu Options");
+                    Console.WriteLine(" 1. Start Breathing Activity");
+                    Console.WriteLine(" 2. Start Reflecting Activity");
+                    Console.WriteLine(" 3. Start Listing Activity");
+                    Console.WriteLine(" 4. Quit");
+                    Console.WriteLine();
+                    Console.WriteLine("Please enter your selection: ");
+                    _userChoice = Console.ReadLine();
 
-        Activity activity1 = new Activity(); // new class instance
 
-        if (_userChoice == "1")
-        {
-            BreathingActivity breathing1 = new BreathingActivity();
-            string startString = activity1.getStartBreathing(); // getter for start string
-            Console.WriteLine(startString); // write start string to console
-            breathing1.setTime(); // read time from user
-            breathing1.Load();
+
+                    if (_userChoice == "1")
+                    {
+                        BreathingActivity breathing1 = new BreathingActivity();
+                        breathing1.Run();
+                    }
+
+                    else if(_userChoice == "2")
+                    {
+                        ReflectingActivity reflect1 = new ReflectingActivity();
+                        reflect1.Reflect();
+                    }
+
+                    else if(_userChoice == "3")
+                    {
+                        ListingActivity listing1 = new ListingActivity();
+                        listing1.Listing();
+                    }
+
+                    else
+                    {
+                        Console.WriteLine();
+                    }
+                }
+                return _userChoice;
+            }
         }
 
-        else if(_userChoice == "2")
-        {
-            string startString = activity1.getStartReflecting(); // getter for start string
-            Console.WriteLine(startString); // write start string to console
-            ReflectingActivity reflect1 = new ReflectingActivity();
-            reflect1.Reflect();
-            // call to the reflecting activity class
-        }
-
-        else if(_userChoice == "3")
-        {
-            string startString = activity1.getStartListing(); // getter for start string
-            Console.WriteLine(startString); // write start string to console
-            // call to the listing activity class
-        }
-
-        else
-        {
-            Console.WriteLine();
-        }
+        RunProgram();
 
     
 

@@ -1,70 +1,28 @@
 public class BreathingActivity
 {
 
-    public int time;
-    public int iterations;
-
-    public void setTime()
+    public void Run()
     {
-        string stringSeconds = Console.ReadLine();
-        int seconds = int.Parse(stringSeconds);
-        time = seconds;
-    }
-
-
-    public void Load()
-    {
+        int time = 0;
+        int iterations;
+        Activity activity1 = new Activity();
+        BreathingActivity breathing1 = new BreathingActivity();
+        string startString = activity1.getStartBreathing(); // getter for start string
+        Console.WriteLine(startString); // write start string to console
+        time = activity1.setTime(); // read time from user
+        
         iterations = time/4;
+
         foreach (int value in Enumerable.Range(1, iterations))
         {
-            Console.Clear();
-            Console.WriteLine("o . .    Breathe in");
-            Console.WriteLine(".   .");
-            Console.WriteLine(". . .");
-            Thread.Sleep(500);
-            Console.Clear();
-
-            Console.WriteLine(". o .    Breathe in");
-            Console.WriteLine(".   .");
-            Console.WriteLine(". . .");
-            Thread.Sleep(500);
-            Console.Clear();
-
-            Console.WriteLine(". . o    Breathe in");
-            Console.WriteLine(".   .");
-            Console.WriteLine(". . .");
-            Thread.Sleep(500);
-            Console.Clear();
-
-            Console.WriteLine(". . .    Breathe in");
-            Console.WriteLine(".   o");
-            Console.WriteLine(". . .");
-            Thread.Sleep(500);
-            Console.Clear();
-
-            Console.WriteLine(". . .    Breathe out");
-            Console.WriteLine(".   .");
-            Console.WriteLine(". . o");
-            Thread.Sleep(500);
-            Console.Clear();
-
-            Console.WriteLine(". . .    Breathe out");
-            Console.WriteLine(".   .");
-            Console.WriteLine(". o .");
-            Thread.Sleep(500);
-            Console.Clear();
-
-            Console.WriteLine(". . .    Breathe out");
-            Console.WriteLine(".   .");
-            Console.WriteLine("o . .");
-            Thread.Sleep(500);
-            Console.Clear();
-
-            Console.WriteLine(". . .    Breathe out");
-            Console.WriteLine("o   .");
-            Console.WriteLine(". . .");
-            Thread.Sleep(500);
-            Console.Clear();
-        }    
+            activity1.Load(500, "Breathe In", "Breathe Out");
+        }
+        
     }
+    
+
+    
+
+
+    
 }
