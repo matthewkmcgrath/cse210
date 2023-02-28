@@ -21,10 +21,24 @@ class Program
 
         if (_userChoice == "1")
         {
-            string startString = activity1.getStart(); // getter for start string
+            string startString = activity1.getStartBreathing(); // getter for start string
             Console.WriteLine(startString); // write start string to console
             activity1.setTime(); // read time from user
             activity1.Load();
+        }
+
+        else if(_userChoice == "2")
+        {
+            string startString = activity1.getStartReflecting(); // getter for start string
+            Console.WriteLine(startString); // write start string to console
+            // call to the reflecting activity class
+        }
+
+        else if(_userChoice == "3")
+        {
+            string startString = activity1.getStartListing(); // getter for start string
+            Console.WriteLine(startString); // write start string to console
+            // call to the listing activity class
         }
 
         else
