@@ -21,16 +21,19 @@ class Program
 
         if (_userChoice == "1")
         {
+            BreathingActivity breathing1 = new BreathingActivity();
             string startString = activity1.getStartBreathing(); // getter for start string
             Console.WriteLine(startString); // write start string to console
-            activity1.setTime(); // read time from user
-            activity1.Load();
+            breathing1.setTime(); // read time from user
+            breathing1.Load();
         }
 
         else if(_userChoice == "2")
         {
             string startString = activity1.getStartReflecting(); // getter for start string
             Console.WriteLine(startString); // write start string to console
+            ReflectingActivity reflect1 = new ReflectingActivity();
+            reflect1.Reflect();
             // call to the reflecting activity class
         }
 
